@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<title>flexbox</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style>
+		/*
+		CSS Flexbox
+		コンテナ（親要素）
+		アイテム（子要素）
+		という2つの要素によって構成
+		*/
+
+		p {
+			text-align: center;
+			line-height: 20px;
+		}
+		
+		.f-container {
+			
+			display: flex;
+			/*
+			flex-direction: row;
+			
+			flex-direction: row-reverse;
+			
+			flex-direction: column;
+			
+			flex-direction: column-reverse;
+			*/
+			
+			
+			/*
+			flex-wrap: nowrap;
+			
+			flex-wrap: wrap;
+			*/
+			flex-wrap: wrap-reverse;
+			
+			/*								
+			justify-content: flex-start;
+			justify-content: flex-end;
+			justify-content: center;
+			justify-content: space-between;
+			justify-content: space-around;
+			*/
+			/*
+			align-items: flex-start;
+			align-items: flex-end;
+			align-items: center;
+			*/
+			
+			/*
+			複数行の時の垂直方向の位置 | align-content は割愛
+			*/
+
+			border: 10px solid;
+			border-color: chocolate;
+		}
+
+		.f-item {
+			margin: 5px;
+			width: 100px;
+			height: 100px;
+			font-size: 40px;
+			color: white;
+			background-color: blueviolet;
+		}
+
+		/* ↓align-items の時コメントアウトしましょうか↓ */
+		/*
+		.item1 { height: 300px; }
+		.item2 { height: 250px; }
+		.item3 { height: 200px; }
+		.item4 { height: 350px; }
+		.item5 { height: 300px; }
+		.item6 { height: 200px; }
+		.item7 { height: 250px; }
+		.item8 { height: 150px; }
+		*/
+
+		/* ↓子要素 f-item の時、コメントアウトしましょうか↓ */
+		/*
+		.item1 { order: 3; } 
+		.item2 { order: 1; } 
+		.item3 { order: 6; } 
+		.item4 { order: 8; } 
+		.item5 { order: 7; } 
+		.item6 { order: 2; } 
+		.item7 { order: 5; } 
+		.item8 { order: 4; } 
+		*/
+		/*
+		.item1 { flex-grow: 2; } 
+		.item2 { flex-grow: 1; } 
+		.item3 { flex-grow: 3; } 
+		*/
+
+	</style>
+</head>
+
+<body>
+	<div class="f-container">
+		<div class="f-item item1"><p>１</p></div>
+		<div class="f-item item2"><p>２</p></div>
+		<div class="f-item item3"><p>３</p></div>
+		<div class="f-item item4"><p>４</p></div>
+		<div class="f-item item5"><p>５</p></div>
+		<div class="f-item item6"><p>６</p></div>
+		<div class="f-item item7"><p>７</p></div>
+		<div class="f-item item8"><p>８</p></div>
+	</div>
+</body>
+
+</html>
